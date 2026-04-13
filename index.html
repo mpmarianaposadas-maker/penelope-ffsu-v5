@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Penélope FFSU v5</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">⚖</span>
+        <div>
+          <div class="logo-title">Penélope FFSU</div>
+          <div class="logo-sub">v5 · Sistema de Gestión</div>
+        </div>
+      </div>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav">
+      <div class="nav-section">
+        <div class="nav-section-title">Principal</div>
+        <a class="nav-item active" data-view="dashboard" href="#dashboard">
+          <span class="nav-icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a class="nav-item" data-view="expedientes" href="#expedientes">
+          <span class="nav-icon">📁</span>
+          <span>Expedientes</span>
+        </a>
+        <a class="nav-item" data-view="lineas" href="#lineas">
+          <span class="nav-icon">📋</span>
+          <span>Líneas de Crédito</span>
+        </a>
+        <a class="nav-item" data-view="sujetos" href="#sujetos">
+          <span class="nav-icon">👥</span>
+          <span>Sujetos</span>
+        </a>
+        <a class="nav-item" data-view="deudas" href="#deudas">
+          <span class="nav-icon">💳</span>
+          <span>Deudas</span>
+        </a>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-title">Normativa</div>
+        <a class="nav-item" data-view="normas" href="#normas">
+          <span class="nav-icon">📜</span>
+          <span>Normas Aplicables</span>
+        </a>
+        <a class="nav-item" data-view="plazos" href="#plazos">
+          <span class="nav-icon">⏱</span>
+          <span>Plazos Procesales</span>
+        </a>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-title">Herramientas</div>
+        <a class="nav-item" data-view="simulador" href="#simulador">
+          <span class="nav-icon">🧮</span>
+          <span>Simulador</span>
+        </a>
+        <a class="nav-item" data-view="reportes" href="#reportes">
+          <span class="nav-icon">📊</span>
+          <span>Reportes</span>
+        </a>
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="user-avatar">MP</div>
+        <div>
+          <div class="user-name">Usuario FFSU</div>
+          <div class="user-role">Administrador</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content" id="mainContent">
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="btn-icon" id="sidebarToggle" title="Menú">
+          <span>☰</span>
+        </button>
+        <div class="breadcrumb" id="breadcrumb">Dashboard</div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <input type="text" id="globalSearch" placeholder="Buscar expediente, sujeto..." class="search-input">
+        </div>
+        <button class="btn btn-primary btn-sm" id="btnNuevoExp">+ Nuevo Expediente</button>
+        <div class="notification-btn">
+          <span>🔔</span>
+          <span class="notif-badge" id="notifBadge">3</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- VIEW CONTAINER -->
+    <div class="view-container" id="viewContainer">
+      <!-- Views are injected here by JS -->
+      <div id="loadingSpinner" class="loading-spinner">Cargando...</div>
+    </div>
+  </main>
+
+  <!-- MODAL OVERLAY -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none">
+    <div class="modal" id="modalContainer">
+      <div class="modal-header">
+        <h3 id="modalTitle">Título</h3>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/expedientes.js"></script>
+  <script src="js/views/lineas.js"></script>
+  <script src="js/views/sujetos.js"></script>
+  <script src="js/views/deudas.js"></script>
+  <script src="js/views/normas.js"></script>
+  <script src="js/views/plazos.js"></script>
+  <script src="js/views/simulador.js"></script>
+  <script src="js/views/reportes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
