@@ -1,0 +1,82 @@
+/* ============================================================
+   tokens.css — Sistema Penélope PoC FFSU v5
+   Variables CSS, tipografías y temas claro/oscuro
+   Base normativa: Identidad visual ENACOM
+   ============================================================ */
+
+:root {
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --radius-sm: .375rem;
+  --radius-md: .5rem;
+  --radius-lg: .75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --trans: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --font-body: Inter, 'Helvetica Neue', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+/* Tema oscuro (por defecto) */
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --surf: #161b22;
+  --surf2: #21262d;
+  --surf3: #30363d;
+  --brd: #30363d;
+  --brd2: #21262d;
+  --txt: #e6edf3;
+  --muted: #8b949e;
+  --faint: #484f58;
+  --pri: #3fb950;
+  --pri-d: #1a3f21;
+  --pri-h: #52c866;
+  --warn: #d29922;
+  --warn-d: #3d2f0c;
+  --err: #f85149;
+  --err-d: #3f1c1b;
+  --info: #58a6ff;
+  --info-d: #1c2f45;
+  --pur: #bc8cff;
+  --pur-d: #2d2050;
+  --gray-100: #21262d;
+  --shad: 0 8px 24px rgba(0,0,0,.4);
+  --red: #f85149;
+}
+
+/* Tema claro */
+[data-theme="light"] {
+  --bg: #f6f8fa;
+  --surf: #fff;
+  --surf2: #f6f8fa;
+  --surf3: #eaeef2;
+  --brd: #d0d7de;
+  --brd2: #eaeef2;
+  --txt: #1f2328;
+  --muted: #656d76;
+  --faint: #afb8c1;
+  --pri: #1a7f37;
+  --pri-d: #dafbe1;
+  --pri-h: #138a33;
+  --warn: #9a6700;
+  --warn-d: #fff8c5;
+  --err: #cf222e;
+  --err-d: #ffebe9;
+  --info: #0969da;
+  --info-d: #ddf4ff;
+  --pur: #8250df;
+  --pur-d: #fbefff;
+  --gray-100: #f6f8fa;
+  --shad: 0 8px 24px rgba(140,149,159,.2);
+  --red: #cf222e;
+}
