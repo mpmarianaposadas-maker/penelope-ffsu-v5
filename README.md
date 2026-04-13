@@ -65,5 +65,5 @@ penelope-ffsu-v5/
 ## Versión
 
 - v5.0 — Abril 2026
-- Proyecto académico — IALAB / UBA
+- Proyecto académico
 - No apto para uso en producción sin intervención de ONTI y autoridad de protección de datos (art. 29, Ley 25.326)
